@@ -1,0 +1,6 @@
+{
+  "name": "MedHOne AI Care — Lab Tests & Diagnostics",
+  "description": "Book certified lab tests, home sample collection, and pathology scans across certified partner labs with MedHOne AI Care.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

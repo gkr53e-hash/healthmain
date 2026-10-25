@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan for fixing inaccurate image diagnosis by implementing smart non-medical image classification and visual validation, preventing false skin condition diagnoses on screenshots, and providing bilingual scan guidance.",
+  "updatedAt":  "2026-10-25T20:06:02.818724523Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

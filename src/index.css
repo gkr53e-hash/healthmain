@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0d9488;
+    color: #ffffff;
+  }
+}
+
+/* Custom subtle medical glass and glow effects */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-nav-dark {
+  background: rgba(10, 15, 29, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+/* Pulse Glows */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(13, 148, 136, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(13, 148, 136, 0.6);
+  }
+}
+
+.pulse-glow-teal {
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-emergency {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(239, 68, 68, 0.8);
+  }
+}
+
+.pulse-glow-red {
+  animation: pulse-emergency 2s infinite;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =====================================================================
+   Advanced Medical & Cyber UI Keyframe Animations
+   ===================================================================== */
+
+@keyframes scanline {
+  0% {
+    top: 2%;
+    opacity: 0.6;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 2%;
+    opacity: 0.6;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 3.8s ease-in-out infinite;
+}
+
+@keyframes ecg-dash {
+  0% {
+    stroke-dashoffset: 450;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-ecg-pulse {
+  stroke-dasharray: 450;
+  animation: ecg-dash 2.4s linear infinite;
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  transform-origin: center center;
+  animation: radar-sweep 5s linear infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-gentle 4s ease-in-out 2s infinite;
+}
+
+@keyframes ripple-ping {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.animate-ripple-ping {
+  animation: ripple-ping 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes audio-wave-height {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 22px;
+  }
+}
+
+.animate-audio-1 {
+  animation: audio-wave-height 0.85s ease-in-out infinite;
+}
+.animate-audio-2 {
+  animation: audio-wave-height 1.1s ease-in-out 0.15s infinite;
+}
+.animate-audio-3 {
+  animation: audio-wave-height 0.75s ease-in-out 0.3s infinite;
+}
+.animate-audio-4 {
+  animation: audio-wave-height 1.25s ease-in-out 0.1s infinite;
+}
+.animate-audio-5 {
+  animation: audio-wave-height 0.95s ease-in-out 0.25s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.bg-cyber-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.08) 1px, transparent 1px);
+}
+
+.bg-radar-grid {
+  background-size: 28px 28px;
+  background-image: 
+    radial-gradient(circle, rgba(13, 148, 136, 0.18) 1px, transparent 1px);
+}
+
+
